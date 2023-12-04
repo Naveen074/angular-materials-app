@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <h2>Ripple</h2>
+        <mat-divider></mat-divider>
+        <div class="content">
+            <div class="row">
+                <div class="col-3">
+                    <mat-card matRipple class="bg-app" routerLink="buttons">
+                        <mat-icon>smart_button</mat-icon>
+                        Buttons
+                    </mat-card>
+                </div>
+                <div class="col-3">
+                    <mat-card matRipple [matRippleColor]="'#cdb4dba1'" routerLink="buttonToggle" class="bg-app">
+                        <mat-icon>smart_button</mat-icon>
+                        Buttons Toggle
+                    </mat-card>
+                </div>
+                <div class="col-3">
+                    <mat-card matRipple [matRippleColor]="myColor" routerLink="dyColor" class="bg-app">
+                        <mat-icon>smart_button</mat-icon>
+                        Dynamic Color
+                    </mat-card>
+                </div>
+                <div class="col-3">
+                    <mat-card matRipple [matRippleCentered]="true" routerLink="elevation" class="bg-app">
+                        <mat-icon>smart_button</mat-icon>
+                        Elevation
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-3">
+                    <mat-card matRipple [matRippleUnbounded]="true" class="bg-app" routerLink="buttons">
+                        <mat-icon>smart_button</mat-icon>
+                        Ripple
+                    </mat-card>
+                </div>
+                <div class="col-3">
+                    <mat-card matRipple [matRippleRadius]="50" routerLink="buttonToggle" class="bg-app">
+                        <mat-icon>smart_button</mat-icon>
+                        Buttons Toggle
+                    </mat-card>
+                </div>
+                <div class="col-3">
+                    <mat-card matRipple [matRippleTrigger]="trigger" routerLink="dyColor" class="bg-app">
+                        <mat-icon>smart_button</mat-icon>
+                        Dynamic Color
+                    </mat-card>
+                    <div #trigger>
+                        <button mat-button>Trigger</button>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <mat-card routerLink="elevation" class="bg-app">
+                        <mat-icon>smart_button</mat-icon>
+                        Elevation
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+
+</div>

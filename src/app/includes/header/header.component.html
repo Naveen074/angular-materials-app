@@ -1,0 +1,38 @@
+<header>
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>My App</span>
+        <button  matBadgeColor="primary" mat-raised-button  color="accent" *ngIf="exclusive">Exclusive</button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon matBadge="{{cartCount}}" [matBadgeColor]="cartCount>5? 'warn':'accent'"  [matBadgeHidden]="cartCount<=0">shopping_cart</mat-icon>
+        </button>
+        <button matBadge="{{cartCount}}" [matBadgeColor]="cartCount>5? 'warn':'accent'" mat-raised-button [matBadgeHidden]="cartCount<=0">Accent</button>
+        <button mat-icon-button [matMenuTriggerFor]="menuicon" class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #menuicon="matMenu">
+          <button mat-menu-item>
+              <mat-icon>person</mat-icon>
+              <span>Profile</span>
+          </button>
+          <button mat-menu-item disabled>
+              <mat-icon>key</mat-icon>
+              <span>Change Password</span>
+          </button>
+          <button mat-menu-item (click)="Onlogout()">
+              <mat-icon>power_settings_new</mat-icon>
+              <span>Log Out</span>
+          </button>
+      </mat-menu>
+        
+      </mat-toolbar>
+</header>

@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <h1>Button-Toggle</h1>
+        <mat-divider></mat-divider>
+        <div class="row">
+            <div class="col-6">
+                <div class="container">
+                    <h3>Single Button Toggle</h3>
+                    <div class="row">
+                        <mat-button-toggle color="'accent" #myToggle>{{ myToggle.checked?
+                            'Active':'Inactive'}}</mat-button-toggle>
+                        <p>{{myToggle.checked}}</p>
+                        <mat-button-toggle color="'accent" #myToggle (change)="toggle($event)">{{ myToggle.checked?
+                            'Active':'Inactive'}}</mat-button-toggle>
+                        <p>{{myToggle.checked}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="container">
+                    <h3>Button Toggle Group</h3>
+                    <div class="row">
+                        <mat-button-toggle-group #group="matButtonToggleGroup" (change)="onGroupSelect($event)">
+                            <mat-button-toggle value="left"><mat-icon>format_align_left</mat-icon></mat-button-toggle>
+                            <mat-button-toggle
+                                value="center"><mat-icon>format_align_center</mat-icon></mat-button-toggle>
+                            <mat-button-toggle value="right"><mat-icon>format_align_right</mat-icon></mat-button-toggle>
+                            <mat-button-toggle
+                                value="justify"><mat-icon>format_align_justify</mat-icon></mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                    <br>
+                    <p [style.text-align]="group.value">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Voluptas numquam deleniti, nostrum asperiores repellat minus a
+                        distinctio ducimus eos dolorum iste incidunt suscipit? Saepe incidunt
+                        unde facere maxime suscipit blanditiis?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="container">
+                    <h3>Mutiple Toggle Group</h3>
+                    <div class="row">
+                        <mat-button-toggle-group #group2="matButtonToggleGroup" multiple>
+                            <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+                            <mat-button-toggle value="React">React</mat-button-toggle>
+                            <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+                            <mat-button-toggle value="Nextjs">Nextjs</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                    {{group2.value}}
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="container">
+                    <h3>Button Toggle inside of a Template-driven form</h3>
+                    <div class="row">
+                        <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+                            <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                            <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                            <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                    <p>Chosen value is {{fontStyle}}</p>
+                </div>
+            </div>
+        </div>
+<div class="row">
+    <div class="col-6">
+        <h3>Button Toggle inside of a Reactive form</h3>
+        <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+            <mat-button-toggle value="bold">Bold</mat-button-toggle>
+            <mat-button-toggle value="italic">Italic</mat-button-toggle>
+            <mat-button-toggle value="underline">Underline</mat-button-toggle>
+          </mat-button-toggle-group>
+          <p>Chosen value is {{fontStyleControl.value}}</p>
+    </div>
+    <div class="col-6"></div>
+</div>
+    </div>
+    <div class="col-2"></div>
+</div>

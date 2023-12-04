@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{pdata.title? pdata.title : 'Are You Sure?'}}</h1>
+<div mat-dialog-content>
+  <p>{{pdata.text? pdata.text : 'Do you want to take this action?'}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button mat-dialog-close>No Thanks</button>
+  <button mat-flat-button [mat-dialog-close]="true" color="warn" cdkFocusInitial>Confirm</button>
+</div>
+

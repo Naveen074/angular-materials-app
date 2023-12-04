@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h1>Badges</h1>
+      <mat-divider></mat-divider>
+      <div class="btn-wrapper mt-3">
+        <div class="row">
+          <div class="col-6">
+            <mat-card class="btn-card">
+              <h2>Basic Badges</h2>
+              <div class="btn-row">
+                <button matBadge="4" matBadgeColor="primary" mat-raised-button  color="accent">Accent</button>
+              </div>
+              <div class="btn-row">
+                <div matBadge="1" matBadgeSize="large" matBadgeOverlap="false" class="demo-section">welcome to Angular Material</div>
+                <div matBadge="10" matBadgePosition="below" matBadgeColor="warn" matBadgeOverlap="false" class="demo-section">welcome to Angular Material</div>
+              </div>
+              <div class="btn-row">
+                
+              </div>
+            </mat-card>
+  
+          </div>
+          <div class="col-6">
+            <mat-card class="btn-card">
+              <h2>Add or Remove Cart Item</h2>
+              <div class="btn-row">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" (click)="add()">
+                  <mat-icon>add</mat-icon>
+                </button>
+                <span class="mx-2">{{count}}</span>
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" (click)="remove()">
+                  <mat-icon>remove</mat-icon>
+                </button>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  
+  </div>
